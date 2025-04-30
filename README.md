@@ -1,99 +1,140 @@
-# AI-Based Garbage Sorting Bot
+📚 Table of Contents
 
-This project aims to develop an AI-powered garbage sorting system that can automatically classify different types of garbage materials using computer vision techniques.
+    Overview
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Hardware Setup](#hardware-setup)
-  - [3D Printed Components](#3d-printed-components)
-  - [Parts to be Bought](#parts-to-be-bought)
-- [Dataset](#dataset)
-- [Software Implementation](#software-implementation)
-  - [Model Architecture](#model-architecture)
-  - [Training and Evaluation](#training-and-evaluation)
-  - [Real-time Object Detection](#real-time-object-detection)
-- [Garbage Sorting Mechanism](#garbage-sorting-mechanism)
-- [Results and Accuracy](#results-and-accuracy)
-- [Usage](#usage)
-- [Future Improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
+    System Components
 
-## Introduction
-Proper waste management is a critical issue, and accurate garbage classification is the first step towards efficient recycling and disposal. This project aims to create an AI-based garbage sorting system that can automatically recognize and classify different types of garbage materials, such as plastic, paper, metal, and organic waste.
+        Custom 3D Printed Parts
 
-## Hardware Setup
-The hardware setup for this project includes 3D printed components and some additional parts that need to be bought.
+        Electronics and Hardware
 
-### 3D Printed Components
-The 3D printed components for this project include:
-- [Garbage Sorting Bin](https://www.thingiverse.com/thing:1832591)
-- [Servo Motor Mount](https://www.thingiverse.com/thing:2920541)
-- [Camera Mount](https://www.thingiverse.com/thing:3430866)
+    Dataset Information
 
-You can find the STL files for these components in the `3D_Printed_Parts` folder of this repository.
+    AI Model Implementation
 
-### Parts to be Bought
-In addition to the 3D printed components, you will need to purchase the following parts:
-- Raspberry Pi 4 Model B
-- Raspberry Pi Camera Module v2
-- Servo Motor
-- Various electronic components (wires, breadboard, etc.)
+        Neural Network Designs
 
-## Dataset
-The dataset used for this project is the [Garbage Classification V2](https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2) dataset from Kaggle. This dataset contains images of different types of garbage materials, including plastic, paper, metal, and organic waste.
+        Training Workflow
 
-## Software Implementation
-The software implementation for this project is done using Python and the TensorFlow deep learning library.
+        Live Detection Pipeline
 
-### Model Architecture
-The code provided in this repository uses several different convolutional neural network (CNN) models, including:
-- Model 0: A simple CNN model with 3 convolutional layers and 2 dense layers.
-- Model 1: A CNN model with 3 convolutional layers, 2 dense layers, and an additional dense layer.
-- Model 2: A deeper CNN model with 4 convolutional layers, 2 dense layers, and dropout.
-- Model 3: A CNN model with data augmentation, 3 convolutional layers, and 2 dense layers.
-- Model 4: A deeper CNN model with data augmentation, 4 convolutional layers, and 2 dense layers.
-- Model 5: A CNN model with data augmentation, 4 convolutional layers, 2 dense layers, and dropout.
+    Mechanical Sorting Process
 
-### Training and Evaluation
-The code loads the dataset, preprocesses the images, and trains the models using the TensorFlow Keras API. It also includes functions to plot the training and validation loss and accuracy, as well as to evaluate the models on a separate test dataset.
+    Performance and Evaluation
 
-### Real-time Object Detection
-The modified code provided in this README includes a `detect_objects_from_webcam` function that uses the trained model to perform real-time object detection on the video feed from the webcam. This allows the system to classify the garbage materials in real-time.
+    Getting Started
 
-## Garbage Sorting Mechanism
-The conveyor belt system is powered by a 12V DC motor operating at 100 RPM, providing the necessary rotational force to drive the belt. The system utilizes a 280 mm GT2 timing belt paired with a 20-tooth pulley, ensuring precise, synchronized movement and preventing any slippage during operation. To minimize friction and enhance efficiency, ball bearings are incorporated, allowing the conveyor to run smoothly while reducing wear and tear on the components.
+    Potential Enhancements
 
-The rotational motion from the motor is effectively transferred to the pulley, which then converts it into linear motion, driving the conveyor belt forward. This setup is well-suited for applications that require moderate speed and precise control, such as material handling or light manufacturing processes.
+    How to Contribute
 
-To enable automated waste segregation, a camera mount is positioned above the conveyor belt. This camera captures images of the items moving along the belt and, using computer vision algorithms, identifies the type of waste. Based on the waste classification, a further rotary disk mechanism is integrated at the end of the conveyor belt. This rotary disk can rotate and divert the waste items into separate collection bins, segregating the waste into different categories (e.g., plastic, metal, organic) for efficient recycling and disposal.
+    License and Attribution
 
-Proper tensioning of the timing belt is crucial, as it ensures optimal performance and prevents issues like belt slippage or misalignment. The combination of these components results in a reliable, durable, and efficient conveyor system, capable of meeting the demands of various automated waste segregation processes.
+🔍 Overview
 
-## Results and Accuracy
-The accuracy of the different models is evaluated on the test dataset, and the best performing model (Model 5) achieves an average accuracy of **98%**. This high accuracy demonstrates the effectiveness of the chosen model architecture and the quality of the dataset.
+Efficient waste separation is key to modern recycling efforts. This project introduces an automated garbage sorting system driven by AI and computer vision that can classify waste into categories like plastic, paper, metal, and organic in real-time.
+🛠 System Components
+🔧 Custom 3D Printed Parts
 
-## Usage
-To use this project, you will need to:
-1. 3D print the required components.
-2. Assemble the hardware setup, including the Raspberry Pi, camera, servo motor, and rotary disk mechanism.
-3. Install the necessary software dependencies, including Python, TensorFlow, and OpenCV.
-4. Run the provided Python script to train the model and start the real-time object detection and sorting process.
+To support the hardware design, 3D printed parts are used for mounting and structure:
 
-## Future Improvements
-Some potential future improvements for this project include:
-- Optimizing the mechanical sorting mechanism for faster and more efficient garbage segregation.
-- Expanding the dataset to include a wider range of garbage materials.
-- Exploring more advanced deep learning architectures for improved classification accuracy.
-- Developing a user-friendly interface for the system.
-- Integrating the system with smart waste management solutions for comprehensive waste handling.
+    Sorting Bin Container
 
-## Contributing
-Contributions to this project are welcome. If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+    Servo Holder Assembly
 
-## License
-This project is licensed under the [MIT License](LICENSE).
+    Camera Bracket
 
-This project is based on the code from the Kaggle notebook "Material Classifier - TensorFlow CNN" by Omar El Ganainy: [https://www.kaggle.com/code/omarelg/material-classifier-tensorflow-cnn]
+STL files can be found in the 3D_Printed_Parts folder within the project directory.
+⚙️ Electronics and Hardware
 
-The original code has been modified and extended to include additional features, such as 3D printed components, real-time object detection, and the garbage sorting mechanism.
+To assemble the sorting mechanism, the following items are required:
+
+    Raspberry Pi 4 (Model B)
+
+    Raspberry Pi Camera Module v2
+
+    Servo Motor (compatible with Raspberry Pi)
+
+    12V DC Motor (100 RPM)
+
+    GT2 Timing Belt (280 mm) and Pulley (20 teeth)
+
+    Ball Bearings
+
+    Miscellaneous electronics (breadboard, jumpers, resistors, etc.)
+
+🧠 Dataset Information
+
+We use the Garbage Classification V2 Dataset from Kaggle. It contains labeled images for several waste categories including plastic, paper, metal, and organic waste, suitable for training a classification model.
+🧩 AI Model Implementation
+📐 Neural Network Designs
+
+Several CNN models have been implemented and evaluated:
+
+    Model A: Basic CNN with 3 conv layers and 2 dense layers.
+
+    Model B: Similar to A but with an additional dense layer.
+
+    Model C: Deeper network with 4 conv layers, dropout included.
+
+    Model D: Includes data augmentation, 3 conv layers, and dense layers.
+
+    Model E: Augmented input with 4 conv layers and improved structure.
+
+    Model F: Advanced design using data augmentation and dropout layers for generalization.
+
+🏋️ Training Workflow
+
+Models are trained using TensorFlow’s Keras API. The script handles image preprocessing, model compilation, training, validation, and test evaluation. Graphs for loss and accuracy are generated automatically.
+🎥 Live Detection Pipeline
+
+A dedicated function detect_objects_from_webcam allows real-time classification using the webcam feed. Once deployed on the Raspberry Pi, the system can sort waste as it moves along the conveyor belt.
+🔄 Mechanical Sorting Process
+
+The sorting mechanism is based on a conveyor system driven by a 12V DC motor (100 RPM) with a GT2 belt and pulley combo. The camera, mounted above the belt, captures images for classification.
+
+After classification:
+
+    A rotary disk mechanism is triggered by a servo motor.
+
+    The disk rotates to direct waste into the correct bin.
+
+Ball bearings reduce friction, and proper tensioning of the belt ensures consistent, reliable operation.
+📊 Performance and Evaluation
+
+Each model is evaluated using a held-out test set. The best-performing model (Model F) achieved an average accuracy of 98%, demonstrating strong potential for real-world use.
+🚀 Getting Started
+
+To deploy the system:
+
+    Print the required components listed in the 3D print section.
+
+    Assemble the mechanical parts and connect the electronics.
+
+    Install Python packages: TensorFlow, OpenCV, etc.
+
+    Train a model or use the provided pretrained weights.
+
+    Run the detection and sorting script to begin operation.
+
+🔧 Potential Enhancements
+
+Ideas for extending the project:
+
+    Faster and more compact mechanical design.
+
+    Support for more waste categories (e.g., glass, textiles).
+
+    Integration with mobile/web dashboard for monitoring.
+
+    Deployment-ready edge AI using TensorFlow Lite.
+
+    Energy-efficient operation powered by solar panels.
+
+
+
+This project is distributed under the MIT License.
+
+Original inspiration and base code from:
+Omar El Ganainy's Kaggle notebook - Material Classifier - TensorFlow CNN
+Our version includes new models, real-time detection, mechanical integration, and full hardware documentation.
